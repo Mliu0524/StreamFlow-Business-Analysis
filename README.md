@@ -47,7 +47,8 @@ This is an initial EDA to spot trends and outliers. Will demonstrate usage in Ta
 Note: Notice that revenue and marketing metrics we collected is not suitable for data processing and data visualization. The raw data in Fact revenue table and marketing table has start date and end date, since we need to analyze data on monthly basis, we're going to slice and dice the data combined with date dimension. We're going to look at by each customer each month, so we can compare start date and end date with month start (date dim table), and use ActiveBOM(start of month) and ActiveEOM(end of month), ActiveBOM and ActiveEOM will be assigned to either 1 or 0 depends on whether a customer churns by start of the month and end of the month
 
 
-<img width="929" height="837" alt="image" src="https://github.com/user-attachments/assets/6f025126-8165-4b82-bfae-66db4f7439e7" />
+<img width="818" height="803" alt="image" src="https://github.com/user-attachments/assets/0ccfcdbb-938e-492d-821e-d2d06baef042" />
 
-This prepares data for analyzing in Tableau.
+
+This prepares data for analyzing in Tableau. Note: for the subscription that's still active, I replaced end date with 9/30/2026 as this is the hard end date for this project.
 
