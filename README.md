@@ -47,8 +47,7 @@ Note: Notice that revenue and marketing metrics we collected is not suitable for
 
 This prepares data for analyzing in Tableau. Note: for the subscription that's still active, I replaced end date with 9/30/2026 as this is the hard end date for this project.
 
-Start with current month revenue analysis:
-<img width="977" height="764" alt="image" src="https://github.com/user-attachments/assets/81f365bf-19fb-478c-bef7-a13f5623bc48" />
+
 We notice that revenue has been dropping since May 2025. By looking at the trend for active subscribers every month, we spot active subscribers started dropping since June 2025. I believe active subscribers is one of 
 the driving force affecting revenue. But i want to do some exploration to see what other factors we have.
 
@@ -83,5 +82,13 @@ I investigated the decline in monthly revenue after May 2025 using correlation a
 
 
 Revenue and Active Subscriber trends moved closely together throughout most of the analysis period, indicating that subscriber volume was a major revenue driver. Decision Tree Regression confirmed this finding, attributing over 90% of model importance to Active Subscribers. However, the sharp revenue decline observed after the revenue peak was significantly larger than the decline in Active Subscribers, suggesting additional factors such as changes in ARPU, pricing, subscription mix, or revenue recognition may also have contributed to the downturn.
+
+
+
+Current Month Revenue KPIs:
+<img width="1002" height="798" alt="image" src="https://github.com/user-attachments/assets/a247b353-66ab-4c93-b118-1fcd1181c7b7" />
+Summary:
+Streamflow September reaches $106.71k in revenue, which is 0.07% lower comparing to previous month. However, ARPU increases by 0.06% which is $17.16 on average. Family plan tops other plans having $37.34k in revenue.
+CLV so far reaches $19.49M in revenue.
 
 
