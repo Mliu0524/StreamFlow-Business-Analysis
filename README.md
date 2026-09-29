@@ -12,15 +12,10 @@ Data Architectures:
 
 
 Key Business Questions:
-
 What the subscriber's growth trend looking like?
-
 What drives customer churn?
-
 Which marketing campaigns generate the highest ROAS?
-
 How much a customer worth over their lifetime with the company?
-
 Can customer churns be predicted before they take actions?
 
 
@@ -51,4 +46,42 @@ Note: Notice that revenue and marketing metrics we collected is not suitable for
 
 
 This prepares data for analyzing in Tableau. Note: for the subscription that's still active, I replaced end date with 9/30/2026 as this is the hard end date for this project.
+
+Start with current month revenue analysis:
+<img width="977" height="764" alt="image" src="https://github.com/user-attachments/assets/81f365bf-19fb-478c-bef7-a13f5623bc48" />
+We notice that revenue has been dropping since May 2025. By looking at the trend for active subscribers every month, we spot active subscribers started dropping since June 2025. I believe active subscribers is one of 
+the driving force affecting revenue. But i want to do some exploration to see what other factors we have.
+
+Data preparation:
+Query to turn raw data into format that's suitable for fitting regression model
+<img width="714" height="712" alt="image" src="https://github.com/user-attachments/assets/c62d777a-fb5b-4c18-9cf1-4edfb7a4e624" />
+
+Now I'm trying with multiple linear regression to fit the model:
+<img width="978" height="820" alt="image" src="https://github.com/user-attachments/assets/9b466988-edcb-4b81-a532-69059c4475ba" />
+Interpretation: 
+Multiple regression analysis found that subscriber-related metrics were the primary drivers of revenue performance. Active subscribers and new subscriber acquisition exhibited positive relationships with revenue, while churn had a negative relationship. Monthly marketing spend showed little direct impact on revenue after accounting for subscriber behavior, suggesting its influence is primarily indirect through customer acquisition and retention.
+
+Also need to look at R^2= 0.583149, which is not bad but I want to try other models to see if we get better results.
+<img width="1061" height="535" alt="image" src="https://github.com/user-attachments/assets/f28ca93e-1c34-4a47-8654-2af5d6eb5eb6" />
+
+Try decision tree model:
+<img width="934" height="654" alt="image" src="https://github.com/user-attachments/assets/9057ceb0-2c00-41c4-8f12-a3ec21c3499b" />
+Train R²: 0.9624216966294823
+Test R²: 0.915504271082746
+
+Conclusion: The model explains 96.2% of the revenue variation in the training dataset. The model explains 91.6% of the revenue variation in unseen months.
+Churn negatively impacts revenue, but the overall size of the active subscriber base is by far the dominant revenue driver. The Decision Tree attributed over 90% of predictive importance to Active Subscribers, while churn accounted for about 7%.
+
+
+Combine conclusion above with SQL manipulation, we confidently say the reason why revenue has been dropping since May 2025 is due to active subscriber base shrinking.
+I investigated the decline in monthly revenue after May 2025 using correlation analysis, multiple linear regression, and decision tree regression. While linear regression explained 58% of revenue variation, the decision tree achieved a test R² of 0.92, indicating non-linear relationships between business drivers and revenue. Feature importance analysis showed that Active Subscribers accounted for approximately 90.5% of the model's predictive power, far exceeding churn (7.1%), new subscriber acquisition (2.4%), and marketing spend (0%). These findings suggest the revenue decline was primarily driven by contraction of the active subscriber base, with churn contributing indirectly through subscriber loss.
+
+
+
+<img width="1170" height="676" alt="image" src="https://github.com/user-attachments/assets/feca7231-da08-400f-9dd4-9f513037d836" />
+
+
+
+Revenue and Active Subscriber trends moved closely together throughout most of the analysis period, indicating that subscriber volume was a major revenue driver. Decision Tree Regression confirmed this finding, attributing over 90% of model importance to Active Subscribers. However, the sharp revenue decline observed after the revenue peak was significantly larger than the decline in Active Subscribers, suggesting additional factors such as changes in ARPU, pricing, subscription mix, or revenue recognition may also have contributed to the downturn.
+
 
