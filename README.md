@@ -12,6 +12,7 @@ Data Architectures:
 
 
 Key Business Questions:
+1.Why we spot revenue dropping since May 2025? What contributed the huge revenue dip in March 2026?
 What the subscriber's growth trend looking like?
 What drives customer churn?
 Which marketing campaigns generate the highest ROAS?
@@ -20,6 +21,13 @@ Can customer churns be predicted before they take actions?
 
 
 SQL Findings:
+1. Since revenue = active subscriber count * ARPU, revenue decrease has to be either caused by drop in active subscribers or ARPU or both
+   <img width="997" height="813" alt="image" src="https://github.com/user-attachments/assets/1cf16260-27f6-4633-8109-18e757010c5a" />
+After comparing the trend of revenue, ARPU and monthly active subscribers, ARPU stays steady and revenue moves in the similar speed as active subscribers.
+Notice how revenue May 2025 peak aligns with the peak in active subscriber June 2025,
+as most of the active subscribers June 2025 contributes to revenue in May 2025. We can confidently say that loss of active subscribers caused revenue drop.
+Hence, we should collaborate with marketing team to find creative methods to drive active subscribers' growth.
+
 
 Create date table with first day of the month starting 01/01/2023 to 09/30/2026 so we can analyze data by month:
 
