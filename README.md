@@ -73,7 +73,7 @@ the driving force affecting revenue. But i want to do some exploration to see wh
 
 Data preparation:
 Query to turn raw data into format that's suitable for fitting regression model
-<img width="714" height="712" alt="image" src="https://github.com/user-attachments/assets/c62d777a-fb5b-4c18-9cf1-4edfb7a4e624" />
+<img width="792" height="737" alt="image" src="https://github.com/user-attachments/assets/91d19559-ae72-4090-ba2f-5c19fc3769dc" />
 
 Now I'm trying with multiple linear regression to fit the model:
 <img width="978" height="820" alt="image" src="https://github.com/user-attachments/assets/9b466988-edcb-4b81-a532-69059c4475ba" />
