@@ -29,6 +29,18 @@ as most of the active subscribers June 2025 contributes to revenue in May 2025. 
 Hence, we should collaborate with marketing team to find creative methods to drive active subscribers' growth.
 
 
+2. Subscriber Growth Analysis
+ <img width="1033" height="792" alt="image" src="https://github.com/user-attachments/assets/ea1eecd7-680a-4b30-a7aa-21a4b01dab59" />
+
+Findings:
+Streamnflow has been gaining new subscribers on a steady pace around 600-700 new subscribers monthly since 2023. A crash in new subscribers happened from March 2026 till May 2026 when it comes to bringing new customers in.
+Around the same time, we also witness the number of customers leaving reaching first time high. These findings confirmed the huge dip in revenue March 2026. Since 2023, Streamflow obtains positive net subscriber growth 
+until October 2025. October 2025, we witness net subscriber reaches 0, we started to see net subscriber count becoming positive due to churned customer started to drop after March 2026(Postive) However, Streamflow still needs to discover the root cause of trouble gaining new subscribers.
+Sugguestions: 
+Collaborate with other teams such as marketing team and IT team to understand if the decrease in CTR, conversion rate and customer support satisfaction has played a huge part in revenue dropping.
+
+
+
 Create date table with first day of the month starting 01/01/2023 to 09/30/2026 so we can analyze data by month:
 
 <img width="518" height="457" alt="image" src="https://github.com/user-attachments/assets/72461075-3bae-45c9-8238-3f733a68a880" />
